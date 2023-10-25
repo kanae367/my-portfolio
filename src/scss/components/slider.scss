@@ -1,0 +1,123 @@
+// $duration: 10s;
+
+// @-webkit-keyframes ticker {
+//     0% {
+//         -webkit-transform: translate3d(0, 0, 0);
+//         transform: translate3d(0, 0, 0);
+//         visibility: visible;
+//     }
+
+//     100% {
+//         -webkit-transform: translate3d(-100%, 0, 0);
+//         transform: translate3d(-100%, 0, 0);
+//     }
+// }
+
+// @keyframes ticker {
+//     0% {
+//         -webkit-transform: translate3d(0, 0, 0);
+//         transform: translate3d(0, 0, 0);
+//         visibility: visible;
+//     }
+
+//     100% {
+//         -webkit-transform: translate3d(-100%, 0, 0);
+//         transform: translate3d(-100%, 0, 0);
+//     }
+// }
+
+// .ticker-wrap {
+//     position: relative;
+//     bottom: 0;
+//     width: 480px;
+//     transform: skew(-200deg);
+//     overflow: hidden;
+//     height: 4rem;
+//     box-shadow: 0 0 2px 1px black;
+//     box-sizing: content-box;
+
+//     &:last-child{
+//         .ticker{
+//             -webkit-animation-direction: reverse;
+//             animation-direction: reverse;
+//         }
+//     }
+
+//     .ticker {
+//         display: inline-block;
+//         height: 4rem;
+//         line-height: 4rem;
+//         white-space: nowrap;
+//         padding-left: 100%;
+//         padding-right: 100%;
+//         box-sizing: content-box;
+
+//         -webkit-animation-iteration-count: infinite;
+//         animation-iteration-count: infinite;
+//         -webkit-animation-timing-function: linear;
+//         animation-timing-function: linear;
+//         -webkit-animation-name: ticker;
+//         animation-name: ticker;
+//         -webkit-animation-duration: $duration;
+//         animation-duration: $duration;
+        
+//         &:hover{
+//             animation-play-state: paused;
+//         }
+
+//         &__item {
+//             display: inline-block;
+//             transform: skew(200deg);
+//             padding: 0 2rem;
+//             font-size: 2rem;
+//             color: white;
+//         }
+//     }
+// }
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-200px * 5))
+    }
+}
+
+
+// Styling
+.slider {
+    height: 4rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 560px;
+    transform: skew(-200deg);
+    box-shadow: 0 0 2px 1px black;
+
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(200px * 10);
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .slide {
+        transform: skew(200deg);
+        font-size: 24px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+.slider:last-child .slide-track{
+    animation-direction: reverse;
+}

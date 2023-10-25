@@ -1,0 +1,22 @@
+.underscore{
+    position: relative;
+    padding-bottom: 5px;
+
+
+    &::after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        background-color: white;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: background-color .4s;
+    }
+
+    &_yellow{
+        &::after{
+            background-color: var(--text-color);
+        }
+    }
+}

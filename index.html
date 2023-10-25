@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta 
+        charset="UTF-8">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <link 
+        rel="stylesheet" 
+        href="public/styles.css">
+    <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com">
+    <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <title>Work in progress</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="socials hidden fade-right">
+        <a class="socials__link" href="https://github.com/kanae367" target="_blank">
+            <img class="socials__icon" src="public/images/icons/github.svg" alt="GitHub">
+        </a>
+        <a class="socials__link" href="mailto:contact@pikulinweb.ru" target="_blank">
+            <img class="socials__icon" src="public/images/icons/mail.svg" alt="Email">
+        </a>
+        <a class="socials__link" href="https://t.me/kanae367" target="_blank">
+            <img class="socials__icon" src="public/images/icons/tg.svg" alt="Telegram">
+        </a>
+        <a class="socials__link" href="https://www.linkedin.com/in/artyom-pikulin-8166b0279/" target="_blank">
+            <img class="socials__icon" src="public/images/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+    </div>
+
+    <header class="header">
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#about">
+                        <li>About</li>
+                    </a>
+                    <a href="#works">
+                        <li>Works</li>
+                    </a>
+                    <a href="#projects">
+                        <li>All Projects</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="texture-container">
+                <div class="texture-inner"></div>
+            </div>
+            <ul class="navbar hidden">
+                <li class="navbar__link">Home</li>
+                <li class="navbar__link">About</li>
+                <li class="navbar__link">Works</li>
+                <li class="navbar__link">
+                    <img class="navbar__link-image" src="public/images/icons/case.svg">
+                    All Projects
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <div class="texture texture_intro-top"></div>
+            <h1 class="intro__header">
+                <span class="intro__header-word hidden">
+                    Fronten<span class="intro__header-word-accent"><span class="wiggle-animation">d</span></span>
+                </span>
+                <span class="intro__header-word hidden">
+                    Develo<span class="intro__header-word-accent"><span class="wiggle-animation">p</span></span>er
+                </span>
+            </h1>
+            <div class="intro__info hidden">
+                <a class="intro__info-link" href="/public/images/photos/firstphoto1440.png" download>
+                    <img class="intro__icon" src="public/images/icons/pdf.svg" alt="pdf">
+                    <span class="underscore">
+                        Download Portfolio
+                    </span>
+                </a>
+                <span class="intro__info-name">
+                    Artyom Pikulin
+                </span>
+            </div>
+            <div class="texture texture_intro-bottom"></div>
+        </section>
+        
+        <section class="about" id="about">
+            <div class="texture texture_about-top"></div>
+            <div class="texture-container texture-container_about-top">
+                <div class="texture-inner"></div>
+            </div>
+            <div class="about__label underscore underscore_yellow">About</div>
+            <div class="about__content-wrapper">
+                <div class="about__content">
+                    <div class="about__slide">
+                        <img class="about__slide-image" src="public/images/photos/firstphoto.png" alt="Me">
+                        <img class="about__slide-image" src="public/images/photos/firstphoto1440.png" alt="Me" >
+                        <div class="about__slide-text"> 
+                            <p>
+                                I’m Artyom Pikulin, a front-end web developer from Russia.
+                            </p>
+                            <p>
+                                I have acquired high level programming skills 
+                                from online courses on 
+                                renowned platforms like HTML Academy, Udemy, Skillbox. 
+                                I also deepen my knowledge by reading a variety of educational literature.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Assumenda, nesciunt. Eaque voluptate fugit tenetur doloribus
+                                quia consectetur corporis cumque sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__slide">
+                        <img class="about__slide-image" src="/public/images/photos/secondphoto.png" alt="Me">
+                        <img class="about__slide-image" src="/public/images/photos/secondphoto1440.png" alt="Me">
+                        <div>
+                            <div class="about__slide-text">
+                                <p>
+                                    I like building an adaptive,
+                                    interactive websites using modern
+                                    programming tools such as INSERT SOME COOL TECHNOLOGIES.
+                                </p>
+                                <p>
+                                    I want to become a full-stack developer in the future, 
+                                    so I have some experience with back-end as well.
+                                </p>
+                            </div>
+                            <div class="about__slide-tickers">
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide">
+                                            <img data-tooltip="HTML5" src="/public/images/icons/html.svg" alt="HTML">
+                                            HTML5
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="CSS3" src="/public/images/icons/css3.svg" alt="CSS">
+                                            CSS3
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="JavaScript" src="/public/images/icons/js.svg" alt="JavaScript">
+                                            JavaScript
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="TypeScript" src="/public/images/icons/ts.svg" alt="TypeScript">
+                                            TypeScript
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="React" src="/public/images/icons/react.svg" alt="React">
+                                            React
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="HTML5" src="/public/images/icons/html.svg" alt="HTML">
+                                            HTML5
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="CSS3" src="/public/images/icons/css3.svg" alt="CSS">
+                                            CSS3
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="JavaScript" src="/public/images/icons/js.svg" alt="JavaScript">
+                                            JavaScript
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="TypeScript" src="/public/images/icons/ts.svg" alt="TypeScript">
+                                            TypeScript
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="React" src="/public/images/icons/react.svg" alt="React">
+                                            React
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide">
+                                            <img data-tooltip="Docker" src="/public/images/icons/docker.svg" alt="Docker">
+                                            Docker
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="Firebase" src="/public/images/icons/firebase.svg" alt="Firebase">
+                                            Firebase
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="Figma" src="/public/images/icons/figma.svg" alt="Figma">
+                                            Figma
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="JQuery" src="/public/images/icons/jquery.svg" alt="JQuery">
+                                            JQuery
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="GitHub" src="/public/images/icons/github.svg" alt="GitHub">
+                                            GitHub
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="Docker" src="/public/images/icons/docker.svg" alt="Docker">
+                                            Docker
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="Firebase" src="/public/images/icons/firebase.svg" alt="Firebase">
+                                            Firebase
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="Figma" src="/public/images/icons/figma.svg" alt="Figma">
+                                            Figma
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="JQuery" src="/public/images/icons/jquery.svg" alt="JQuery">
+                                            JQuery
+                                        </div>
+                                        <div class="slide">
+                                            <img data-tooltip="GitHub" src="/public/images/icons/github.svg" alt="GitHub">
+                                            GitHub
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="texture-container texture-container_about-bottom">
+                <div class="texture-inner"></div>
+            </div>
+            <div class="texture texture_about-bottom"></div>
+        </section>
+        
+        <section class="works" id="works">
+            <div class="works__label underscore underscore_yellow hidden fade-right">Some Works</div>
+            <ul class="works__list">
+                <li class="works__card">
+                    <h2 class="card__title">Space Tourism</h2>
+                    <div class="card__content">
+                        <video class="card__image" loop autoplay src="public/images/websites/spacetourism.mp4"></video>
+                        <button class="card__button"></button>
+                        <div class="card__technologies card__content-item">
+                            <div class="card__links">
+                                <a class="card__link" href="https://kanae367.github.io/space-tourism/" target="_blank">Visit Site</a>
+                                <a class="card__link" href="https://github.com/kanae367/space-tourism">Code on GitHub</a>
+                            </div>
+                            <p class="card__technologies-title">Technologies used:</p>
+                            <div class="card__icons">
+                                <img class="card__icon" data-tooltip="HTML" src="public/images/icons/html.svg" alt="HTML">
+                                <div class="tooltip">HTML</div>
+                                <img class="card__icon" data-tooltip="CSS" src="public/images/icons/css3.svg" alt="CSS">
+                                <div class="tooltip">CSS</div>
+                                <img class="card__icon" data-tooltip="JQuery" src="public/images/icons/jquery.svg" alt="JQuery">
+                                <div class="tooltip">JQuery</div>
+                                <img class="card__icon" data-tooltip="JS" src="public/images/icons/js.svg" alt="JS">
+                                <div class="tooltip">JS</div>
+                            </div>
+                        </div>
+                        <div class="card__description card__content-item">
+                            <p class="card__description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate excepturi maxime quasi repudiandae. Nemo,
+                            necessitatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate excepturi maxime quasi repudiandae. Nemo, necessitatibus?</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="works__card">
+                    <h2 class="card__title">Feedback App</h2>
+                    <div class="card__content card__content_tablet">
+                        <video class="card__image" autoplay loop src="public/images/websites/feedback_tablet.mp4"></video>
+                        <button class="card__button"></button>
+                        <div class="card__technologies card__content-item">
+                            <div class="card__links">
+                                <a class="card__link" href="https://pikulinweb.ru" target="_blank">Visit Site</a>
+                                <a class="card__link" href="https://github.com/kanae367/feedback-app">Code on GitHub</a>
+                            </div>
+                            <p class="card__technologies-title">Technologies used:</p>
+                            <div class="card__icons">
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/html.svg" alt="HTML">
+                                <div class="tooltip">HTML</div>
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/css3.svg" alt="CSS">
+                                <div class="tooltip">CSS</div>
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/react.svg" alt="React">
+                                <div class="tooltip">React</div>
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/js.svg" alt="JS">
+                                <div class="tooltip">JS</div>
+                            </div>
+                        </div>
+                        <div class="card__description card__content-item">
+                            <p class="card__description-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, unde ipsam, facilis repellat debitis, cupiditate repellendus neque dolores ipsum quasi in aliquam inventore ducimus praesentium non ab. Illo, quod temporibus?</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="works__card">
+                    <h2 class="card__title">Todo App</h2>
+                    <div class="card__content">
+                        <video class="card__image" autoplay loop src="public/images/websites/todo.mp4"></video>
+                        <button class="card__button"></button>
+                        <div class="card__technologies card__content-item">
+                            <div class="card__links">
+                                <a class="card__link" href="https://pikulinweb.ru" target="_blank">Visit Site</a>
+                                <a class="card__link" href="https://github.com/kanae367/todo-app">Code on GitHub</a>
+                            </div>
+                            <p class="card__technologies-title">Technologies used:</p>
+                            <div class="card__icons">
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/html.svg" alt="HTML">
+                                <div class="tooltip">HTML</div>
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/css3.svg" alt="CSS">
+                                <div class="tooltip">CSS</div>
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/react.svg" alt="React">
+                                <div class="tooltip">React</div>
+                                <img class="card__icon" data-tooltip="true" src="public/images/icons/js.svg" alt="JS">
+                                <div class="tooltip">JS</div>
+                            </div>
+                        </div>
+                        <div class="card__description card__content-item">
+                            <p class="card__description-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, nulla eius
+                                asperiores nisi minima iste accusantium, rerum reprehenderit porro ipsum molestias nihil rem magni
+                                deleniti magnam aliquam voluptate, enim cum.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="works__card">
+                    <h2 class="card__title">Design Agency</h2>
+                    <div class="card__content">
+                        <video class="card__image" autoplay loop src="public/images/websites/design.mp4"></video>
+                        <button class="card__button"></button>
+                        <div class="card__technologies card__content-item">
+                            <div class="card__links">
+                                <a class="card__link" href="https://kanae367.github.io/design-agency-template/" target="_blank">Visit Site</a>
+                                <a class="card__link" href="https://github.com/kanae367/design-agency-template">Code on GitHub</a>
+                            </div>
+                            <p class="card__technologies-title">Technologies used:</p>
+                            <div class="card__icons">
+                                <img class="card__icon" data-tooltip="HTML" src="public/images/icons/html.svg" alt="HTML">
+                                <div class="tooltip">HTML</div>
+                                <img class="card__icon" data-tooltip="CSS" src="public/images/icons/css3.svg" alt="CSS">
+                                <div class="tooltip">CSS</div>
+                                <img class="card__icon" data-tooltip="JQuery" src="public/images/icons/jquery.svg" alt="JQuery">
+                                <div class="tooltip">JQuery</div>
+                                <img class="card__icon" data-tooltip="JS" src="public/images/icons/js.svg" alt="JS">
+                                <div class="tooltip">JS</div>
+                            </div>
+                        </div>
+                        <div class="card__description card__content-item">
+                            <p class="card__description-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti voluptatem, distinctio ullam incidunt neque saepe commodi id eveniet optio voluptatibus ipsam tempora inventore quaerat aperiam pariatur recusandae tempore maxime velit!</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="projects" id="projects">
+            <div class="texture texture_projects-top"><div class="inner"></div></div>
+
+            <div class="projects-container">
+                <div class="projects__inner-text hidden fade-top">
+                    <h2 class="projects__title">Check all my projects by playing <a class="projects__link" href="https://projects.pikulinweb.ru">this game</a>.</h2>
+                </div>
+                <img class="projects__image" src="public/images/websites/projects.png" alt="all projects">
+            </div>
+
+            <div class="texture texture_projects-bottom"><div class="inner"></div></div>
+        </section>
+
+        <section class="socials__bottom">
+            <ul class="socials__links">
+                <li class="hidden">
+                    <a href="#" class="socials__link">Email</a>
+                </li>
+                <li class="hidden">
+                    <a href="#" class="socials__link">GitHub</a>
+                </li>
+                <li class="hidden">
+                    <a href="#" class="socials__link">Telegram</a>
+                </li>
+                <li class="hidden">
+                    <a href="#" class="socials__link">LinkedIn</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="texture texture_footer">
+            <div class="inner"></div>
+        </div>
+        <p class="copyright">Powered by Artyom Pikulin / 2023</p>
+    </footer>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="src/js/aos.js"></script>
+    <script src="src/js/about.js"></script>
+    <script src="src/js/tooltips.js"></script>
+    <script src="src/js/worksCard.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

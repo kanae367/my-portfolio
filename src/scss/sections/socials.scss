@@ -1,0 +1,31 @@
+.socials__links{
+    margin: 0 auto;
+    margin-top: 150px;
+    width: fit-content;
+    font-size: 24px;
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    
+    li:nth-child(2){
+        transition-delay: .25s;
+    }
+    li:nth-child(3){
+        transition-delay: .5s;
+    }
+    li:last-child{
+        transition-delay: .75s;
+    }
+
+    a{
+        color: white;
+        opacity: .6;
+        text-decoration: none;
+    }
+}
+
+.socials__bottom{
+    @media screen and (max-width: 1439px) {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+.hidden{
+    opacity: 0;
+    transition: all .6s;
+}
+
+.fade-left{
+    transform: translateX(-50px);
+}
+
+.fade-right{
+    transform: translateX(50px);
+}
+
+.fade-top{
+    transform: translateY(-50px);
+}
+
+.fade-bottom{
+    transform: translateY(50px);
+}
+
+.show{
+    opacity: 1;
+    transform: translate(0);
+}

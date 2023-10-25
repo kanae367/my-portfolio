@@ -1,0 +1,141 @@
+@import '../components/slider.scss';
+
+.about{
+    position: relative;
+    color: var(--text-color);
+    overflow-x: hidden;
+    padding-bottom: 250px;
+    padding-top: 100px;
+    margin-top: 160px;
+}
+
+.about__label{
+    width: fit-content;
+    font-size: 22px;
+    letter-spacing: 2px;
+
+    margin-bottom: 65px;
+    margin-left: auto;
+    margin-right: 20px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 60px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 38px;
+        margin-right: 220px;
+    }
+}
+
+.about__content-wrapper{
+    width: 1100px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.about__content{
+    display: flex;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    width: 2400px;
+}
+
+.about__slide{
+    flex-shrink: 0;
+    width: 100vw;
+    padding: 20px;
+
+    @media screen and (min-width: 768px) {
+        padding: 60px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        justify-content: space-between;
+        width: 1100px;
+        padding: 60px 0;
+
+        &:last-child{
+            box-sizing: content-box;
+            padding-left: 150px;
+        }
+    }
+}
+
+.about__slide-image{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    
+    @media screen and (max-width: 1439px) {
+        &:not(:first-child){
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 440px;
+        height: 490px;
+        margin: unset;
+
+        &:first-child{
+            display: none;
+        }
+    }
+}
+
+.about__slide-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 24px;
+        width: 480px;
+    }
+}
+
+//FIX
+
+.about__slide-tickers{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 33px;
+    transform: translateX(-15px);
+}
+
+.stepped-animation {
+    height: 600px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.single-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.about__slide{
+    transition: opacity .5s;
+}
+
+.fading{
+    opacity: 0;
+}

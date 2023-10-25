@@ -1,0 +1,19 @@
+.footer{
+    position: relative;
+    margin-top: 250px;
+
+    @media screen and (min-width: 1440px) {
+        margin-top: 60px;
+    }
+}
+
+.copyright{
+    text-align: center;
+    font-size: 14px;
+    color: rgba($color: #fff, $alpha: .6);
+    padding: 20px;
+
+    @media screen and (min-width: 1440px) {
+        font-size: 24px;
+    }
+}
