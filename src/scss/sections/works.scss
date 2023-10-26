@@ -194,8 +194,31 @@
     position: relative;
     border-radius: 8px;
     max-width: 750px;
-    width: calc(100vw - 40px);
     max-height: 600px;
+    width: calc(100vw - 40px);
+    
+    @media screen and (min-width: 1440px) {
+        &.mobile{
+            width: 200px;
+
+            .card__description{
+                top: 50px;
+            }
+        }
+        
+        &.tablet{
+            width: 350px;
+            
+            .card__description{
+                top: 35px;
+                right: -1000px !important;
+            }
+        }
+
+        &.pc{
+            width: 650px;
+        }
+    }
 
     @media screen and (min-width: 1440px) {
         &_active.card__content_description{
@@ -210,10 +233,6 @@
                 display: none;
             }
         }
-    }
-
-    &_tablet{
-        max-width: 600px;
     }
 }
 

@@ -45,6 +45,7 @@
     flex-shrink: 0;
     width: 100vw;
     padding: 20px;
+    background-color: #1e1b1b;
 
     @media screen and (min-width: 768px) {
         padding: 60px;
@@ -58,7 +59,6 @@
 
         &:last-child{
             box-sizing: content-box;
-            padding-left: 150px;
         }
     }
 }

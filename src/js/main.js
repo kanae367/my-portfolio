@@ -1,27 +1,31 @@
 gsap.registerPlugin(ScrollTrigger);
-const container = document.querySelector('.about__content');
-const aboutSections = gsap.utils.toArray('.about__slide');
 
-let scrollTween = gsap.to(aboutSections, {
-    xPercent: -100 * (aboutSections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".about",
-        pin: true,
-        scrub: .1,
-        end: "+=1000",
-        snap: 1
-    }
-})
+let sections = gsap.utils.toArray(".about__slide");
 
-aboutSections.forEach(slide => {
-  ScrollTrigger.create({
-    trigger: slide,
-    containerAnimation: scrollTween,
-    start: "left 1%",
-    toggleClass: "fading"
-  })
+let scrollTween = gsap.to(sections, {
+  xPercent: (i) => -100 * i,
+  duration: (i) => 0.5 * i,
+  ease: "none", // <-- IMPORTANT!
+  scrollTrigger: {
+    trigger: ".about",
+    pin: true,
+    scrub: 0.1,
+    snap: 1,
+    end: "+=1000"
+  }
 });
+
+gsap.to(".a", {
+  scrollTrigger: {
+    trigger: ".b",
+    start: "left 75%",
+    end: "left 50%",
+    containerAnimation: scrollTween,
+    scrub: true,
+    toggleActions: "restart none reset none"
+  },
+  opacity: 0
+})
 
 const socials = document.querySelector('.socials');
 

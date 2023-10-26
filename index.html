@@ -9,6 +9,7 @@
     <link 
         rel="stylesheet" 
         href="public/styles.css">
+    <link rel="shortcut icon" href="public/images/icon.png" type="image/x-icon">
     <link 
         rel="preconnect" 
         href="https://fonts.googleapis.com">
@@ -20,8 +21,10 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Artyom Pikulin, Front-end Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    
     
-    <title>Work in progress</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
@@ -109,7 +112,7 @@
             <div class="about__label underscore underscore_yellow">About</div>
             <div class="about__content-wrapper">
                 <div class="about__content">
-                    <div class="about__slide">
+                    <div class="about__slide a">
                         <img class="about__slide-image" src="public/images/photos/firstphoto.png" alt="Me">
                         <img class="about__slide-image" src="public/images/photos/firstphoto1440.png" alt="Me" >
                         <div class="about__slide-text"> 
@@ -129,7 +132,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="about__slide">
+                    <div class="about__slide b">
                         <img class="about__slide-image" src="/public/images/photos/secondphoto.png" alt="Me">
                         <img class="about__slide-image" src="/public/images/photos/secondphoto1440.png" alt="Me">
                         <div>
@@ -249,7 +252,7 @@
             <ul class="works__list">
                 <li class="works__card">
                     <h2 class="card__title">Space Tourism</h2>
-                    <div class="card__content">
+                    <div class="card__content pc">
                         <video class="card__image" loop autoplay src="public/images/websites/spacetourism.mp4"></video>
                         <button class="card__button"></button>
                         <div class="card__technologies card__content-item">
@@ -277,8 +280,9 @@
                 </li>
                 <li class="works__card">
                     <h2 class="card__title">Feedback App</h2>
-                    <div class="card__content card__content_tablet">
-                        <video class="card__image" autoplay loop src="public/images/websites/feedback_tablet.mp4"></video>
+                    <div class="card__content mobile">
+                        <img class="card__image" src="public/images/websites/mobst.png" alt="">
+                        <!-- <video class="card__image" autoplay loop src="public/images/websites/.mp4"></video> -->
                         <button class="card__button"></button>
                         <div class="card__technologies card__content-item">
                             <div class="card__links">
@@ -304,8 +308,9 @@
                 </li>
                 <li class="works__card">
                     <h2 class="card__title">Todo App</h2>
-                    <div class="card__content">
-                        <video class="card__image" autoplay loop src="public/images/websites/todo.mp4"></video>
+                    <div class="card__content tablet">
+                        <img class="card__image" src="public/images/websites/tabletfeed.png" alt="">
+                        <!-- <video class="card__image" autoplay loop src="public/images/websites/todo.mp4"></video> -->
                         <button class="card__button"></button>
                         <div class="card__technologies card__content-item">
                             <div class="card__links">
@@ -334,7 +339,8 @@
                 <li class="works__card">
                     <h2 class="card__title">Design Agency</h2>
                     <div class="card__content">
-                        <video class="card__image" autoplay loop src="public/images/websites/design.mp4"></video>
+                        <img src="public/images/websites/wide.jpg" alt="" class="card__image">
+                        <!-- <video class="card__image" autoplay loop src="public/images/websites/design.mp4"></video> -->
                         <button class="card__button"></button>
                         <div class="card__technologies card__content-item">
                             <div class="card__links">

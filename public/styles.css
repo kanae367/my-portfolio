@@ -763,6 +763,7 @@ img:hover + .tooltip {
   flex-shrink: 0;
   width: 100vw;
   padding: 20px;
+  background-color: #1e1b1b;
 }
 @media screen and (min-width: 768px) {
   .about__slide {
@@ -778,7 +779,6 @@ img:hover + .tooltip {
   }
   .about__slide:last-child {
     box-sizing: content-box;
-    padding-left: 150px;
   }
 }
 
@@ -1040,8 +1040,26 @@ img:hover + .tooltip {
   position: relative;
   border-radius: 8px;
   max-width: 750px;
-  width: calc(100vw - 40px);
   max-height: 600px;
+  width: calc(100vw - 40px);
+}
+@media screen and (min-width: 1440px) {
+  .card__content.mobile {
+    width: 200px;
+  }
+  .card__content.mobile .card__description {
+    top: 50px;
+  }
+  .card__content.tablet {
+    width: 350px;
+  }
+  .card__content.tablet .card__description {
+    top: 35px;
+    right: -1000px !important;
+  }
+  .card__content.pc {
+    width: 650px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .card__content_active.card__content_description {
@@ -1053,9 +1071,6 @@ img:hover + .tooltip {
   .card__content_active .card__content_technologies {
     display: none;
   }
-}
-.card__content_tablet {
-  max-width: 600px;
 }
 
 .works__card:nth-child(2n) .card__content {
