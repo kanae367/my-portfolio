@@ -27,7 +27,20 @@
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
 <body>
+    <div class="preloader-container">
+        <div class="preloader">
+            <span class="preloader__line"></span>
+            <span class="preloader__line"></span>
+            <span class="preloader__line"></span>
+            <span class="preloader__line"></span>
+            <span class="preloader__line"></span>
+            <span class="preloader__line"></span>
+            <span class="preloader__line"></span>
+        </div>
+    </div>
+
     <div class="socials hidden fade-right">
         <a class="socials__link" href="https://github.com/kanae367" target="_blank">
             <img class="socials__icon" src="public/images/icons/github.svg" alt="GitHub">
@@ -249,8 +262,8 @@
         
         <section class="works" id="works">
             <div class="works__label underscore underscore_yellow hidden fade-right">Some Works</div>
-            <ul class="works__list">
-                <li class="works__card">
+            <ul class="works__list swipe-section">
+                <li class="works__card panel">
                     <h2 class="card__title">Space Tourism</h2>
                     <div class="card__content pc">
                         <video class="card__image" loop autoplay src="public/images/websites/spacetourism.mp4"></video>
@@ -278,7 +291,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="works__card">
+                <li class="works__card panel">
                     <h2 class="card__title">Feedback App</h2>
                     <div class="card__content mobile">
                         <img class="card__image" src="public/images/websites/mobst.png" alt="">
@@ -306,7 +319,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="works__card">
+                <li class="works__card panel">
                     <h2 class="card__title">Todo App</h2>
                     <div class="card__content tablet">
                         <img class="card__image" src="public/images/websites/tabletfeed.png" alt="">
@@ -336,9 +349,9 @@
                         </div>
                     </div>
                 </li>
-                <li class="works__card">
+                <li class="works__card panel">
                     <h2 class="card__title">Design Agency</h2>
-                    <div class="card__content">
+                    <div class="card__content wide">
                         <img src="public/images/websites/wide.jpg" alt="" class="card__image">
                         <!-- <video class="card__image" autoplay loop src="public/images/websites/design.mp4"></video> -->
                         <button class="card__button"></button>
@@ -407,8 +420,10 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollToPlugin3.min.js"></script>
     <script src="src/js/aos.js"></script>
     <script src="src/js/about.js"></script>
+    <script src="src/js/works.js"></script>
     <script src="src/js/tooltips.js"></script>
     <script src="src/js/worksCard.js"></script>
     <script src="src/js/main.js"></script>
