@@ -12,6 +12,10 @@
         bottom: 0px;
         rotate: 1deg;
         box-shadow: 0 10px 10px #000000bb;
+        
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
     
     &_about-top{
@@ -98,7 +102,7 @@
     &_intro-top{
         top: 0px;
         rotate: 5deg;
-        box-shadow: 0 -6px 8px 2px #000000bb;
+        box-shadow: 0 -10px 10px  #000000bb;
 
         @media screen and (min-width: 1440px) {
             display: none;
@@ -108,7 +112,7 @@
     &_intro-bottom{
         bottom: 0;
         rotate: -5deg;
-        box-shadow: 0 6px 8px 2px #000000bb;
+        box-shadow: 0 10px 10px  #000000bb;
 
         @media screen and (min-width: 1440px) {
             display: none;
