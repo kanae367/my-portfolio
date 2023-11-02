@@ -111,7 +111,10 @@
     flex-direction: column;
     gap: 30px;
     margin-top: 33px;
-    transform: translateX(-15px);
+
+    @media screen and (max-width: 767px) {
+        transform: translateX(-15px);
+    }
 }
 
 .stepped-animation {

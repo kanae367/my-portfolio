@@ -128,7 +128,7 @@
                 margin-top: 150px;
             }
         }
-
+        // center
         &.wide{
             width: 1440px;
             height: 350px;
@@ -340,6 +340,16 @@
     object-fit: cover;
     height: 100%;
     border-radius: 8px;
+
+    @media screen and (max-width: 1439px) {
+        &:first-child{
+            display: none;
+        }
+
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+    }
 }
 
 .card__title{
@@ -465,4 +475,14 @@
 .swipe-section .panel {
     position: absolute;
     background-color: #1e1b1b;
+
+    @media screen and (max-width: 1439px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .card__title{
+            margin-top: unset;
+        }
+    }
 }

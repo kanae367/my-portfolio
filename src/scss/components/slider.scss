@@ -23,6 +23,11 @@ $animationSpeed: 40s;
     transform: skew(-200deg);
     box-shadow: 0 0 2px 1px black;
 
+    @media screen and (max-width: 767px) {
+        width: 350px;
+        transform: skew(-200deg) translateX(15px);
+    }
+    
     .slide-track {
         animation: scroll $animationSpeed linear infinite;
         display: flex;

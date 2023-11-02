@@ -289,7 +289,7 @@ img:hover + .tooltip {
   rotate: 1deg;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7333333333);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1439px) {
   .texture_header {
     display: none;
   }
@@ -468,8 +468,7 @@ img:hover + .tooltip {
 }
 @media screen and (min-width: 768px) {
   .intro {
-    padding: 0 60px;
-    padding-top: 120px;
+    padding: 100px 60px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -642,6 +641,12 @@ img:hover + .tooltip {
   transform: skew(-200deg);
   box-shadow: 0 0 2px 1px black;
 }
+@media screen and (max-width: 767px) {
+  .slider {
+    width: 350px;
+    transform: skew(-200deg) translateX(15px);
+  }
+}
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
@@ -778,7 +783,11 @@ img:hover + .tooltip {
   flex-direction: column;
   gap: 30px;
   margin-top: 33px;
-  transform: translateX(-15px);
+}
+@media screen and (max-width: 767px) {
+  .about__slide-tickers {
+    transform: translateX(-15px);
+  }
 }
 
 .stepped-animation {
@@ -1102,6 +1111,16 @@ img:hover + .tooltip {
   height: 100%;
   border-radius: 8px;
 }
+@media screen and (max-width: 1439px) {
+  .card__image {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+  }
+  .card__image:first-child {
+    display: none;
+  }
+}
 
 .card__title {
   color: var(--text-color);
@@ -1210,6 +1229,16 @@ img:hover + .tooltip {
 .swipe-section .panel {
   position: absolute;
   background-color: #1e1b1b;
+}
+@media screen and (max-width: 1439px) {
+  .swipe-section .panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .swipe-section .panel .card__title {
+    margin-top: unset;
+  }
 }
 
 .socials__links {
