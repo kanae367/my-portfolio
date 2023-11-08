@@ -700,17 +700,29 @@ img:hover + .tooltip {
   }
 }
 
-.about__content-wrapper {
-  width: 1100px;
-  margin: 0 auto;
-  overflow-x: hidden;
+@media screen and (min-width: 1280px) {
+  .about__content-wrapper {
+    width: 1100px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
 }
 
 .about__content {
   display: flex;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  width: 2400px;
+}
+@media screen and (max-width: 1279px) {
+  .about__content {
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__content {
+    overflow-x: hidden;
+    scrollbar-width: none;
+    width: 2400px;
+  }
 }
 
 .about__slide {
@@ -847,9 +859,15 @@ img:hover + .tooltip {
 
 .works__list {
   position: relative;
-  height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
+}
+@media screen and (max-width: 1279px) {
+  .works__list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(100vh - 650px);
+    margin-bottom: 200px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .works__list {
@@ -857,16 +875,12 @@ img:hover + .tooltip {
   }
 }
 
-.works__card {
-  position: absolute;
-  inset: 0;
+@media screen and (min-width: 1280px) {
+  .works__card {
+    position: absolute;
+    inset: 0;
+  }
 }
-
-.test {
-  width: 1000px;
-  margin: 0 auto;
-}
-
 .card__title {
   margin-top: 150px;
 }
@@ -875,7 +889,7 @@ img:hover + .tooltip {
   position: relative;
   border-radius: 8px;
   max-height: 600px;
-  width: calc(100vw - 40px);
+  width: auto;
   margin: 0 auto;
 }
 @media screen and (max-width: 1439px) {
@@ -1227,16 +1241,21 @@ img:hover + .tooltip {
     right: -700px;
   }
 }
-.swipe-section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+@media screen and (min-width: 1280px) {
+  .swipe-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
 }
-
 .swipe-section .panel {
-  position: absolute;
   background-color: #1e1b1b;
+}
+@media screen and (min-width: 1280px) {
+  .swipe-section .panel {
+    position: absolute;
+  }
 }
 @media screen and (max-width: 1439px) {
   .swipe-section .panel {

@@ -29,25 +29,26 @@
 
 .works__list{
     position: relative;
-    height: 100vh;
     margin: 0 auto;
-    overflow: hidden;
+    
+    @media screen and (max-width: 1279px) {
+        display: flex;
+        flex-direction: column;
+        gap: calc(100vh - (250px * 2 + 150px));
+        margin-bottom: 200px;
+    }
 
     @media screen and (min-width: 1440px) {
         width: 1440px;
     }
 }
 
-.works__card{
-    position: absolute;
-    inset: 0;
+@media screen and (min-width: 1280px) {
+    .works__card{
+        position: absolute;
+        inset: 0;
+    }
 }
-
-.test{
-    width: 1000px;
-    margin: 0 auto;
-}
-
 
 //slide 
 
@@ -59,7 +60,7 @@
     position: relative;
     border-radius: 8px;
     max-height: 600px;
-    width: calc(100vw - 40px);
+    width: auto;
     margin: 0 auto;
     
     
@@ -473,16 +474,21 @@
     }
 }
 
-.swipe-section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+@media screen and (min-width: 1280px) {
+    .swipe-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 .swipe-section .panel {
-    position: absolute;
     background-color: #1e1b1b;
+    
+    @media screen and (min-width: 1280px) {
+        position: absolute;
+    }
 
     @media screen and (max-width: 1439px) {
         display: flex;
