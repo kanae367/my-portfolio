@@ -1,13 +1,16 @@
-//socials
-const socials = document.querySelector('.socials');
+(() => {
+  document.querySelector('.preloader-container').classList.add('hide');
 
-document.addEventListener('scroll', (e) => {
-  const aboutEndPoint = 2020;
-  const scroll = e.target.documentElement.scrollTop;
+  const socials = document.querySelector('.socials');
 
-  if(scroll > aboutEndPoint){
-    socials.classList.add('scrolled');
-  }else{
-    socials.classList.remove('scrolled');
-  }
-})
+  document.addEventListener('scroll', (e) => {
+    const aboutEndPoint = 2020;
+    const scroll = e.target.documentElement.scrollTop;
+
+    if(scroll > aboutEndPoint){
+      socials.classList.add('scrolled');
+    }else{
+      socials.classList.remove('scrolled');
+    }
+  })
+})()
