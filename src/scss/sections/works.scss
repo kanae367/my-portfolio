@@ -350,6 +350,12 @@
         max-width: 650px;
         height: auto;
     }
+
+    @media screen and (min-width: 1440px) {
+        &:nth-child(2){
+            display: none;
+        }
+    }
 }
 
 .card__title{

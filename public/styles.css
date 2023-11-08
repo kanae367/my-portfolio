@@ -1121,6 +1121,11 @@ img:hover + .tooltip {
     display: none;
   }
 }
+@media screen and (min-width: 1440px) {
+  .card__image:nth-child(2) {
+    display: none;
+  }
+}
 
 .card__title {
   color: var(--text-color);
