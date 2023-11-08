@@ -223,15 +223,17 @@
     opacity: 0;
     inset: 0;
     padding: 0 30px;
-
+    
     @media screen and (min-width: 768px) {
         *{
             max-width: 400px;
             margin: 0 auto;
         }
     }
-
+    
     @media screen and (min-width: 1440px) {
+        visibility: visible;
+
         *{
             max-width: 560px;
         }

@@ -1004,6 +1004,9 @@ img:hover + .tooltip {
   }
 }
 @media screen and (min-width: 1440px) {
+  .card__content-item {
+    visibility: visible;
+  }
   .card__content-item * {
     max-width: 560px;
   }
