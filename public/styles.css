@@ -254,7 +254,11 @@ img:hover + .tooltip {
 
 .footer {
   position: relative;
-  margin-top: 250px;
+}
+@media screen and (max-width: 1280px) {
+  .footer {
+    margin-top: 200px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .footer {
@@ -367,7 +371,7 @@ img:hover + .tooltip {
 }
 .texture_projects-bottom {
   top: unset;
-  bottom: -105px;
+  bottom: -50px;
   rotate: 2deg;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7333333333);
 }
@@ -462,9 +466,7 @@ img:hover + .tooltip {
   --rotate: -6deg;
   position: relative;
   color: var(--text-color);
-  padding: 0 22px;
-  padding-top: 70px;
-  padding-bottom: 120px;
+  padding: 120px 22px;
 }
 @media screen and (min-width: 768px) {
   .intro {
@@ -865,7 +867,7 @@ img:hover + .tooltip {
   .works__list {
     display: flex;
     flex-direction: column;
-    gap: calc(100vh - 650px);
+    gap: 200px;
     margin-bottom: 200px;
   }
 }
@@ -890,7 +892,6 @@ img:hover + .tooltip {
   border-radius: 8px;
   max-height: 600px;
   width: auto;
-  margin: 0 auto;
 }
 @media screen and (max-width: 1439px) {
   .card__content {
@@ -904,14 +905,9 @@ img:hover + .tooltip {
     align-items: center;
   }
   .card__content.mobile, .card__content.tablet {
-    width: 1100px;
     height: 500px;
   }
-  .card__content.mobile, .card__content.wide {
-    flex-direction: row-reverse;
-  }
   .card__content.pc {
-    width: 1440px;
     height: 380px;
   }
   .card__content.pc .card__technologies {
@@ -947,7 +943,6 @@ img:hover + .tooltip {
     margin-top: 150px;
   }
   .card__content.wide {
-    width: 1440px;
     height: 350px;
   }
   .card__content.wide .card__technologies {
@@ -960,31 +955,16 @@ img:hover + .tooltip {
   .card__content.wide .card__links {
     margin-top: 70px;
   }
-  .card__content .card__description {
-    position: unset;
-  }
   .card__content_active .card__content_technologies {
     display: none;
   }
 }
 
-.card__content_desc.card__content_active .card__description {
-  visibility: visible;
-  opacity: 1;
-  font-size: 24px;
-}
 .card__content_tech.card__content_active .card__technologies {
   visibility: visible;
   opacity: 1;
 }
 @media screen and (max-width: 1439px) {
-  .card__content_desc .card__description {
-    visibility: visible;
-    opacity: 1;
-  }
-  .card__content_desc .card__image {
-    filter: brightness(0.3) !important;
-  }
   .card__content_tech .card__technologies {
     visibility: visible;
     opacity: 1;
@@ -1023,25 +1003,6 @@ img:hover + .tooltip {
   }
   .card__content-item * {
     max-width: 560px;
-  }
-}
-
-.card__description-text {
-  font-size: 18px;
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 2px black;
-}
-@media screen and (min-width: 768px) {
-  .card__description-text {
-    margin-top: 90px;
-    font-size: 20px;
-    line-height: 1.7;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .card__description-text {
-    margin-top: unset;
   }
 }
 
@@ -1146,7 +1107,7 @@ img:hover + .tooltip {
 
 .card__title {
   color: var(--text-color);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
@@ -1158,9 +1119,15 @@ img:hover + .tooltip {
 
 @keyframes pulse-animation {
   0% {
+    background-color: #fff;
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
   }
-  100% {
+  25% {
+    background-color: #E0E193;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+  50%, 100% {
+    background-color: #fff;
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
@@ -1174,23 +1141,19 @@ img:hover + .tooltip {
   z-index: 2;
   top: 15px;
   right: 15px;
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background-color: #c7c7c7;
+  background-color: #e0e193;
   border: 1px solid transparent;
+  filter: drop-shadow(0 0 2px #1e1b1b);
   transition: all 0.3s;
   box-shadow: 0px 0px 1px 1px gray;
-  animation: pulse-animation 2s infinite;
+  animation: pulse-animation 8s infinite;
 }
 @media screen and (min-width: 1440px) {
   .card__button {
     display: none;
-  }
-  .card__button:hover {
-    cursor: pointer;
-    animation-play-state: paused;
-    scale: 1.1;
   }
 }
 @media screen and (max-width: 1439px) {
@@ -1200,45 +1163,19 @@ img:hover + .tooltip {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .card__content .card__description {
-    margin-top: 50px;
-    max-height: 130px;
-    overflow-y: scroll;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .card__content .card__description {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: none;
-    width: 550px;
-  }
-  .card__content .card__description-text {
-    line-height: 1.4;
-    font-size: 24px;
-  }
-}
-
 .card__content_tablet .card__links {
   padding-top: 100px;
 }
-.card__content_tablet .card__description {
-  top: 100px;
-}
 
 @media screen and (min-width: 1440px) {
-  .works__card:nth-child(2n) .card__description {
-    right: 800px;
-    left: unset;
+  .card__container {
+    margin: 0 auto;
   }
-  .works__card:first-child .card__description {
-    left: unset;
-    right: -700px;
+  .works__card:nth-child(2) .card__container, .works__card:nth-child(3) .card__container {
+    width: 1100px;
   }
-  .works__card:nth-child(3) .card__description {
-    left: unset;
-    right: -700px;
+  .works__card:nth-child(2n) .card__container {
+    flex-direction: row-reverse;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1266,6 +1203,39 @@ img:hover + .tooltip {
   .swipe-section .panel .card__title {
     margin-top: unset;
   }
+}
+
+.works__text {
+  text-align: center;
+  color: #E0E193;
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media screen and (min-width: 1440px) {
+  .works__text {
+    color: white;
+    letter-spacing: 2px;
+    width: 550px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .works__card:not(:last-child) .card__container {
+    justify-content: space-between;
+  }
+}
+
+.works__card:last-child .card__container {
+  gap: 0px;
 }
 
 .socials__links {
@@ -1324,6 +1294,9 @@ img:hover + .tooltip {
   text-decoration: none;
   position: relative;
   padding-bottom: 3px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
 }
 .projects__link::after {
   content: "";

@@ -1,6 +1,9 @@
 .footer{
     position: relative;
-    margin-top: 250px;
+
+    @media screen and (max-width: 1280px) {
+        margin-top: 200px;
+    }
 
     @media screen and (min-width: 1440px) {
         margin-top: 60px;

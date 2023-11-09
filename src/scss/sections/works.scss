@@ -34,7 +34,7 @@
     @media screen and (max-width: 1279px) {
         display: flex;
         flex-direction: column;
-        gap: calc(100vh - (250px * 2 + 150px));
+        gap: 200px;
         margin-bottom: 200px;
     }
 
@@ -61,8 +61,6 @@
     border-radius: 8px;
     max-height: 600px;
     width: auto;
-    margin: 0 auto;
-    
     
     @media screen and (max-width: 1439px) {
         max-width: 750px;
@@ -74,16 +72,10 @@
         align-items: center;
 
         &.mobile, &.tablet {
-            width: 1100px;
             height: 500px;
         }
 
-        &.mobile, &.wide{
-            flex-direction: row-reverse;
-        }
-
         &.pc{
-            width: 1440px;
             height: 380px;
 
             .card__technologies{
@@ -131,7 +123,6 @@
         }
         // center
         &.wide{
-            width: 1440px;
             height: 350px;
 
             .card__technologies{
@@ -146,11 +137,6 @@
                 margin-top: 70px;
             }
         }
-    
-        
-        .card__description{
-            position: unset;
-        }
 
         &_active {
             .card__content_technologies {
@@ -161,14 +147,6 @@
 }
 
 .card__content{
-    &_desc.card__content_active {
-        .card__description {
-            visibility: visible;
-            opacity: 1;
-            font-size: 24px;
-        }
-    }
-
     &_tech.card__content_active {
         .card__technologies {
             visibility: visible;
@@ -177,18 +155,6 @@
     }
 
     @media screen and (max-width: 1439px){
-        &_desc{
-            .card__description{
-                visibility: visible;
-                opacity: 1;
-            }
-        
-            .card__image {
-                filter: brightness(.3) !important;
-            }
-        }
-    
-    
         &_tech{
             .card__technologies{
                 visibility: visible;
@@ -238,23 +204,6 @@
         *{
             max-width: 560px;
         }
-    }
-}
-
-.card__description-text{
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-
-    @media screen and (min-width: 768px) {
-        margin-top: 90px;
-        font-size: 20px;
-        line-height: 1.7;
-    }
-
-    @media screen and (min-width: 1440px) {
-        margin-top: unset;
     }
 }
 
@@ -363,7 +312,7 @@
 
 .card__title{
     color: var(--text-color);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
 
     @media screen and (min-width: 1440px) {
@@ -374,10 +323,15 @@
 
 @keyframes pulse-animation {
     0% {
+        background-color: #fff;
         box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
     }
-
-    100% {
+    25%{
+        background-color: #E0E193;
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+    50%, 100% {
+        background-color: #fff;
         box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
     }
 }
@@ -394,23 +348,18 @@
     z-index: 2;
     top: 15px;
     right: 15px;
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    background-color: rgba($color: #c7c7c7, $alpha: 1.0);
+    background-color: rgba($color: #E0E193, $alpha: 1.0);
     border: 1px solid transparent;
+    filter: drop-shadow(0 0 2px #1e1b1b);
     transition: all .3s;
     box-shadow: 0px 0px 1px 1px gray;
-    animation: pulse-animation 2s infinite;
+    animation: pulse-animation 8s infinite;
 
     @media screen and (min-width: 1440px) {
         display: none;
-
-        &:hover{
-            cursor: pointer;
-            animation-play-state: paused;
-            scale: 1.1;
-        }
     }
 
     @media screen and (max-width: 1439px) {
@@ -419,59 +368,31 @@
     }
 }
 
-.card__content{
-    .card__description{
-        @media screen and (max-width: 500px) {
-            margin-top: 50px;
-            max-height: 130px;
-            overflow-y: scroll;
-        }
-
-        @media screen and (min-width: 1440px) {
-            visibility: visible;
-            opacity: 1;
-            pointer-events: none;
-            width: 550px;
-
-            &-text {
-                line-height: 1.4;
-                font-size: 24px;
-            }
-        }
-    }
-}
-
 .card__content_tablet{
     .card__links{
         padding-top: 100px;
     }
-
-    .card__description{
-        top: 100px;
-    }
 }
 
 @media screen and (min-width: 1440px) {
-    .works__card:nth-child(2n){
-        .card__description{
-            right: 800px;
-            left: unset;
+    .card__container{
+        margin: 0 auto;
+    }
+    
+    .works__card{
+        &:nth-child(2), &:nth-child(3) {
+            .card__container{
+                width: 1100px;
+            }
+        }
+
+        &:nth-child(2n){
+            .card__container{
+                flex-direction: row-reverse;
+            }
         }
     }
     
-    .works__card:first-child{
-        .card__description{
-            left: unset;
-            right: -700px;
-        }
-    }
-    
-    .works__card:nth-child(3){
-        .card__description{
-            left: unset;
-            right: -700px;
-        }
-    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -498,5 +419,41 @@
         .card__title{
             margin-top: unset;
         }
+    }
+}
+
+.works__text{
+    text-align: center;
+    color: #E0E193;
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 1.6;
+    
+    @media screen and (min-width: 1440px) {
+        color: white;
+        letter-spacing: 2px;
+        width: 550px;
+        font-size: 24px;
+    }
+}
+
+.card__container{
+    @media screen and (min-width: 1440px){
+        display: flex;
+        align-items: center;
+    }
+}
+
+.works__card:not(:last-child){
+    .card__container{
+        @media screen and (min-width: 1440px) {
+            justify-content: space-between;
+        }
+    }
+}
+
+.works__card:last-child{
+    .card__container{
+        gap: 0px;
     }
 }

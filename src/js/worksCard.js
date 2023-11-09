@@ -1,4 +1,4 @@
-const cardStates = ['', 'card__content_tech', 'card__content_desc'];
+const cardStates = ['', 'card__content_tech'];
 
 const cadrButtonClickHandler = (e) => {
     e.preventDefault();
