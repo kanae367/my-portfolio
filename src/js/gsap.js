@@ -11,7 +11,7 @@ if(window.innerWidth > 1280 && window.innerHeight > 720){
         scrollTrigger: {
             trigger: ".about",
             pin: true,
-            scrub: 0.1,
+            scrub: .1,
             snap: 1,
             end: "+=1000"
         }
@@ -29,7 +29,7 @@ if(window.innerWidth > 1280 && window.innerHeight > 720){
         opacity: 0
     })
     
-    //works
+//works
     let currentIndex = 0;
     let animating;
     let swipePanels = gsap.utils.toArray(".works__card");

@@ -3,17 +3,7 @@ const cardStates = ['', 'card__content_tech'];
 const cadrButtonClickHandler = (e) => {
     e.preventDefault();
     const container = e.target.closest('.card__content');
-    
-    if(container.classList.contains(cardStates[1])) {
-        container.classList.remove(cardStates[1]);
-        container.classList.add(cardStates[2]);
-    }else if (container.classList.contains(cardStates[2])){
-        container.classList.remove(cardStates[2]);
-    }else if(window.innerWidth < 1440){
-        container.classList.add(cardStates[1]);
-    }else{
-        container.classList.add(cardStates[2]);
-    }
+    container.classList.toggle('card__content_tech');
 }
 
 const cards = document.querySelectorAll('.card__technologies');

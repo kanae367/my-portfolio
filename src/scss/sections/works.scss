@@ -160,6 +160,10 @@
                 visibility: visible;
                 opacity: 1;
             }
+            
+            .card__image{
+                filter: brightness(.3);
+            }
         }
     }
 
