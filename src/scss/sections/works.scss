@@ -160,10 +160,6 @@
                 visibility: visible;
                 opacity: 1;
             }
-            
-            .card__image {
-                filter: brightness(.3) !important;
-            }
         }
     }
 
@@ -274,16 +270,12 @@
         .card__content{
             margin-left: auto;
         }
-
-        .card__image{
-            filter: brightness(.6);
-        }
     }
 
     &:nth-child(3){
         .card__content{
             margin-right: auto;
-        }
+        } 
     }
 }
 

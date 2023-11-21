@@ -21,6 +21,11 @@
         color: white;
         opacity: .6;
         text-decoration: none;
+        transition: opacity .5s;
+
+        &:hover{
+            opacity: 1;
+        }
     }
 }
 

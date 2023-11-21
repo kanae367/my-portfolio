@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0">
     <link 
         rel="stylesheet" 
-        href="public/styles.css">
+        href="dist/css/main.min.css">
     <link rel="shortcut icon" href="public/images/icon.png" type="image/x-icon">
     <link 
         rel="preconnect" 
@@ -82,12 +82,26 @@
                 <div class="inner"></div>
             </div>
             <ul class="navbar hidden">
-                <li class="navbar__link">Home</li>
-                <li class="navbar__link">About</li>
-                <li class="navbar__link">Works</li>
                 <li class="navbar__link">
-                    <img class="navbar__link-image" src="/public/images/icons/case.svg">
-                    All Projects
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__link">
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+                <li class="navbar__link">
+                    <a href="#works">
+                        Works
+                    </a>
+                </li>
+                <li class="navbar__link">
+                    <a href="#projects">
+                        <img class="navbar__link-image" src="/public/images/icons/case.svg">
+                        All Projects
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -187,7 +201,7 @@
                                 <p>
                                     I like building an adaptive,
                                     interactive websites using modern
-                                    programming tools such as INSERT SOME COOL TECHNOLOGIES.
+                                    programming tools such as React, Redux, NodeJS and others. 
                                 </p>
                                 <p>
                                     I want to become a full-stack developer in the future, 
@@ -323,17 +337,17 @@
                             </div>
                         </div>
                         <div class="works__text">
-                            A single-page website that contains information about space, planets and modern space technologies.
+                            A single-page website that contains information about space, planets and modern space technologies. It consists of 4 sections, each of which contains its own information. The website looks great on devices with different viewports due to adaptive layout. 
                         </div>
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title">Feedback App</h2>
+                    <h2 class="card__title">Todo App</h2>
                     <div class="card__container">
 
                         <div class="card__content mobile">
-                            <img class="card__image" src="public/images/websites/mobst.png" alt="feedback app">
-                            <img class="card__image" src="public/images/websites/feedback.webp" alt="feedback app">
+                            <img class="card__image" src="public/images/websites/mobile.webp" alt="todo app">
+                            <img class="card__image" src="public/images/websites/feedback.webp" alt="todo app">
                             <button class="card__button"></button>
                             <div class="card__technologies card__content-item">
                                 <div class="card__links">
@@ -354,17 +368,16 @@
                             </div>
                         </div>
                         <div class="works__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui obcaecati soluta a fugit dolorem beatae animi incidunt
-                            quis et? Autem nisi necessitatibus animi quae at!
-                        </div>
+This website is a task management app. Users can add, edit and delete tasks and boards. Tasks can contain a subtasks
+which can be marked by user as completed. Users can change the status of a task to change the column it is in.                        </div>
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title">Todo App</h2>
+                    <h2 class="card__title">Feedback App</h2>
                     <div class="card__container">
                         <div class="card__content tablet">
-                            <img class="card__image" src="public/images/websites/tabletfeed.png" alt="todo app">
-                            <img class="card__image" src="public/images/websites/todo.webp" alt="todo app">
+                            <img class="card__image" src="public/images/websites/tabletfeed.png" alt="feedback app">
+                            <img class="card__image" src="public/images/websites/feedback.webp" alt="feedback app">
                             <button class="card__button"></button>
                             <div class="card__technologies card__content-item">
                                 <div class="card__links">
@@ -384,9 +397,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="works__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui obcaecati soluta a fugit dolorem beatae animi incidunt
-                            quis et? Autem nisi necessitatibus animi quae at!
+                        <div class="works__text">  
+                            This is a feedback sharing app. With its help, user can report an issue, which can be handled by development team
+                            afterwards. User can leave a comment to a feedback, upvote it or edit it if necessary. Feedbacks have different states.
+                            Feedbacks with a "suggestion" state can be seen on the home page, while the rest can be seen on the roadmap page.
                         </div>
                     </div>
                 </li>
@@ -394,7 +408,7 @@
                     <h2 class="card__title">Design Agency</h2>
                     <div class="card__container">
                         <div class="card__content wide">
-                            <img src="public/images/websites/wide.jpg" alt="design agency" class="card__image">
+                            <img src="public/images/websites/wide.webp" alt="design agency" class="card__image">
                             <img class="card__image" src="public/images/websites/designagency.webp" alt="design agency">
                             <button class="card__button"></button>
                             <div class="card__technologies card__content-item">
@@ -430,7 +444,7 @@
                 <div class="projects__inner-text hidden fade-top">
                     <h2 class="projects__title">Check all my projects <a class="projects__link" target="_blank" href="https://works.pikulinweb.ru">here</a>.</h2>
                 </div>
-                <img class="projects__image" src="public/images/websites/projects.png" alt="all projects">
+                <img class="projects__image" src="public/images/websites/works.webp" alt="all projects">
             </div>
 
             <div class="texture texture_projects-bottom"><div class="inner"></div></div>
@@ -439,7 +453,7 @@
         <section class="socials__bottom">
             <ul class="socials__links">
                 <li class="hidden">
-                    <a href="#" class="socials__link">Email</a>
+                    <a href="" class="socials__link">Email</a>
                 </li>
                 <li class="hidden">
                     <a href="#" class="socials__link">GitHub</a>
@@ -465,10 +479,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollToPlugin3.min.js"></script>
-    <script src="src/js/aos.js"></script>
-    <script src="src/js/gsap.js"></script>
-    <script src="src/js/tooltips.js"></script>
-    <script src="src/js/worksCard.js"></script>
-    <script src="src/js/main.js"></script>
+    <script src="dist/js/aos.min.js"></script>
+    <script src="dist/js/gsap.min.js"></script>
+    <script src="dist/js/tooltips.min.js"></script>
+    <script src="dist/js/worksCard.min.js"></script>
+    <script src="dist/js/main.min.js"></script>
 </body>
 </html>

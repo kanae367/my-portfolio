@@ -22,13 +22,18 @@
     }
 
     &__link{
-        display: inline-block;
-        color: var(--text-color);
-        font-size: 26px;
-        margin-right: 90px;
         list-style: none;
         transition: all 1s;
-        text-shadow: rgb(255, 242, 0) 0 0 2px;
+
+        a{
+            display: inline-block;
+            color: var(--text-color);
+            font-size: 26px;
+            margin-right: 90px;
+            text-decoration: none;
+            text-shadow: rgb(255, 242, 0) 0 0 2px;
+        }
+
 
         &:hover{
             scale: 1.03;
@@ -44,9 +49,11 @@
 
 
 .navbar__link:last-child{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    a{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
     &:hover{
         img{
