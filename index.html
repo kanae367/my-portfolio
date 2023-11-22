@@ -58,26 +58,58 @@
 
     <header class="header">
         <nav role="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <a href="#">
-                        <li>Home</li>
-                    </a>
-                    <a href="#about">
-                        <li>About</li>
-                    </a>
-                    <a href="#works">
-                        <li>Works</li>
-                    </a>
-                    <a href="#projects">
-                        <li>All Projects</li>
-                    </a>
-                </ul>
+            <div class="mobile-nav">
+                <button id="nav-button">=</button>
+                <div class="menu menu_nav">
+                    <button class="close-button">X</button>
+                    <ul class='menu__links'>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link active">Home</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link">Works</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link menu__link_accent">All Projects</a>
+                        </li>
+                    </ul>
+                    <a class="github-link" href="https://github.com/kanae367/my-portfolio"><img src="public/images/icons/github.png" alt="">GitHub</a>
+                </div>
+
+                <h2 class="mobile-nav__title">20$/hour</h2>
+
+                <button id="socials-button">
+                    <img class="socials-button__image" src="/public/images/icons/mail.svg" alt="socials">
+                </button>
+                <div class="menu menu_socials">
+                    <button class="close-button">X</button>
+                    <ul class="menu__links">
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="mailto:contact@pikulinweb.ru">Email<span>/</span></a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#">hh.ru<span>/</span></a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="https://github.com/kanae367">GitHub<span>/</span></a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="https://www.linkedin.com/in/artyom-pikulin-8166b0279/">LinkedIn<span>/</span></a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="https://t.me/kanae367">Telegram<span>/</span></a>
+                        </li>
+                    </ul>
+                    <div class="libs">
+                        <p>GSAP 3.11.4</p>
+                        <p>Popper 2.0.0</p>
+                    </div>
+                </div>
             </div>
+
             <div class="texture texture_header">
                 <div class="inner"></div>
             </div>
@@ -98,7 +130,7 @@
                     </a>
                 </li>
                 <li class="navbar__link">
-                    <a href="#projects">
+                    <a class="test_link">
                         <img class="navbar__link-image" src="/public/images/icons/case.svg">
                         All Projects
                     </a>
@@ -312,7 +344,7 @@
             <div class="works__label underscore underscore_yellow hidden fade-right">Some Works</div>
             <ul class="works__list swipe-section">
                 <li class="works__card panel">
-                    <h2 class="card__title">Space Tourism</h2>
+                    <h2 class="card__title hidden fade-left">Space Tourism</h2>
                     <div class="card__container">
                         <div class="card__content pc">
                             <img class="card__image" loop autoplay src="public/images/websites/spacetourism.webp">
@@ -342,7 +374,7 @@
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title">Todo App</h2>
+                    <h2 class="card__title hidden fade-right">Todo App</h2>
                     <div class="card__container">
 
                         <div class="card__content mobile">
@@ -373,7 +405,7 @@ which can be marked by user as completed. Users can change the status of a task 
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title">Feedback App</h2>
+                    <h2 class="card__title hidden fade-left">Feedback App</h2>
                     <div class="card__container">
                         <div class="card__content tablet">
                             <img class="card__image" src="public/images/websites/tabletfeed.png" alt="feedback app">
@@ -405,10 +437,10 @@ which can be marked by user as completed. Users can change the status of a task 
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title">Design Agency</h2>
+                    <h2 class="card__title hidden fade-right">Design Agency</h2>
                     <div class="card__container">
-                        <div class="card__content wide">
-                            <img src="public/images/websites/wide.webp" alt="design agency" class="card__image">
+                        <div class="card__content pc">
+                            <img src="public/images/websites/designagency.webp" alt="design agency" class="card__image">
                             <img class="card__image" src="public/images/websites/designagency.webp" alt="design agency">
                             <button class="card__button"></button>
                             <div class="card__technologies card__content-item">
@@ -442,7 +474,7 @@ which can be marked by user as completed. Users can change the status of a task 
 
             <div class="projects-container">
                 <div class="projects__inner-text hidden fade-top">
-                    <h2 class="projects__title">Check all my projects <a class="projects__link" target="_blank" href="https://works.pikulinweb.ru">here</a>.</h2>
+                    <h2 class="projects__title">Check all my projects <a class="projects__link" target="_blank" href="https://works.pikulinweb.ru">here</a></h2>
                 </div>
                 <img class="projects__image" src="public/images/websites/works.webp" alt="all projects">
             </div>
@@ -453,16 +485,16 @@ which can be marked by user as completed. Users can change the status of a task 
         <section class="socials__bottom">
             <ul class="socials__links">
                 <li class="hidden">
-                    <a href="" class="socials__link">Email</a>
+                    <a href="mailto:contact@pikulinweb.ru" target="_blank" class="socials__link">Email</a>
                 </li>
                 <li class="hidden">
-                    <a href="#" class="socials__link">GitHub</a>
+                    <a href="https://github.com/kanae367" target="_blank" class="socials__link">GitHub</a>
                 </li>
                 <li class="hidden">
-                    <a href="#" class="socials__link">Telegram</a>
+                    <a href="https://t.me/kanae367" target="_blank" class="socials__link">Telegram</a>
                 </li>
                 <li class="hidden">
-                    <a href="#" class="socials__link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/artyom-pikulin-8166b0279/" target="_blank" class="socials__link">LinkedIn</a>
                 </li>
             </ul>
         </section>
