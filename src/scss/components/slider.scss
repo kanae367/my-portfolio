@@ -20,12 +20,16 @@ $animationSpeed: 40s;
     overflow: hidden;
     position: relative;
     width: 560px;
-    transform: skew(-200deg);
     box-shadow: 0 0 2px 1px black;
+    transform: skew(-200deg);
 
     @media screen and (max-width: 767px) {
         width: 350px;
         transform: skew(-200deg) translateX(15px);
+    }
+
+    @media screen and (min-width: 1440px) {
+        transform: skew(-200deg) translateX(-15px);
     }
     
     .slide-track {

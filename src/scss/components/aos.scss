@@ -1,3 +1,28 @@
+@media screen and (min-width: 1440px) {
+    .works__card{
+        .hidden{
+            opacity: 1;
+            transition: unset;
+        }
+        
+        .fade-left {
+            transform: unset;
+        }
+        
+        .fade-right {
+            transform: unset;
+        }
+        
+        .fade-top {
+            transform: unset;
+        }
+        
+        .fade-bottom {
+            transform: unset;
+        }
+    }
+}
+
 .hidden{
     opacity: 0;
     transition: all .6s;

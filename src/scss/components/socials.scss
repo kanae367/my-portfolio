@@ -13,11 +13,15 @@
 .socials {
     position: fixed;
     bottom: 100px;
-    right: 300px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     z-index: 1000;
+    right: 7vw;
+    
+    @media screen and (min-width: 1800px) {
+        right: 300px;
+    }
 
     @media screen and (max-width: 1439px) {
         display: none;
