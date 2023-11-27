@@ -1,29 +1,35 @@
 .mobile-nav{
     width: 100vw;
-    position: absolute;
     top: 0px;
-    background-color: transparent;
     z-index: 1000;
     display: flex;
     padding: 20px 30px;
     align-items: center;
     justify-content: space-between;
-    transition: background-color .5s, box-shadow .5s, position 0s .5s;
-
+    background-color: #1e1b1b;
+    position: absolute;
+    
     @media screen and (min-width: 768px){
         padding: 10px calc(calc(100vw - 700px) / 2);
     }
-
+    
     @media screen and (min-width: 1280px) {
         display: none;
     }
 }
 
-.mobile-nav_active{
-    background-color: #1e1b1b;
-    box-shadow: none;
-    position: fixed;
+.unseen{
     box-shadow: 0 4px 20px black;
+    position: fixed;
+    margin-top: -80px;
+}
+
+.transition-enable{
+    transition: margin-top .5s;
+}
+
+.mobile-nav_active{
+    margin-top: 0;
 
     .mobile-nav__title{
         visibility: visible;
@@ -186,6 +192,7 @@ a img{
     padding-left: 20px;
     text-transform: uppercase;
 }
+
 .menu__link.active{
     color: var(--text-color);
 }

@@ -1,9 +1,17 @@
 (() => {
-  AOS.init();
+  AOS.init({
+    duration: 500
+  });
   
-  document.querySelector('.preloader-container').classList.add('hide');
-  const socials = document.querySelector('.socials');
+  const removePreloader = () => {
+    const preloader = document.querySelector('.preloader-container');
+    preloader.classList.add('hide');
+    preloader.remove();
+  }
+  
+  removePreloader();
 
+  const socials = document.querySelector('.socials');
   document.addEventListener('scroll', (e) => {
     const aboutEndPoint = 2020;
     const scroll = e.target.documentElement.scrollTop;
@@ -38,8 +46,16 @@
 
   const mobileNav = document.querySelector('.mobile-nav');
   document.addEventListener('scroll', () => {
+    if(window.scrollY > 100){
+      mobileNav.classList.add('unseen');
+    }else{
+      mobileNav.classList.remove('unseen');
+      mobileNav.classList.remove("transition-enable");
+    }
+
     if(window.scrollY > 600){
       mobileNav.classList.add('mobile-nav_active');
+      mobileNav.classList.add("transition-enable");
     }else{
       mobileNav.classList.remove('mobile-nav_active');
     }
