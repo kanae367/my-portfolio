@@ -20,12 +20,8 @@
     <link 
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
     <title>Artyom Pikulin, Front-end Developer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -41,7 +37,7 @@
         </div>
     </div>
 
-    <div class="socials hidden fade-right">
+    <div class="socials" data-aos="fade-right">
         <a class="socials__link" href="https://github.com/kanae367" target="_blank">
             <img class="socials__icon" src="public/images/icons/github.svg" alt="GitHub">
         </a>
@@ -85,7 +81,7 @@
                     </div>
                     </div>
 
-                <h2 class="mobile-nav__title">20$/hour</h2>
+                <h2 class="mobile-nav__title">Artyom Pikulin</h2>
 
                 <button id="socials-button">
                     <img class="socials-button__image" src="/public/images/icons/mail.svg" alt="socials">
@@ -113,6 +109,7 @@
                         <div class="libs">
                             <p>GSAP 3.11.4</p>
                             <p>Popper 2.0.0</p>
+                            <p>AOS 2.3.1</p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +118,7 @@
             <div class="texture texture_header">
                 <div class="inner"></div>
             </div>
-            <ul class="navbar hidden">
+            <ul class="navbar" data-aos="fade-down">
                 <li class="navbar__link">
                     <a href="#">
                         Home
@@ -151,14 +148,14 @@
         <section class="intro">
             <div class="texture texture_intro-top"><div class="inner"></div></div>
             <h1 class="intro__header">
-                <span class="intro__header-word hidden">
+                <span class="intro__header-word">
                     Fronten<span class="intro__header-word-accent"><span class="wiggle-animation">d</span></span>
                 </span>
-                <span class="intro__header-word hidden">
+                <span class="intro__header-word">
                     Develo<span class="intro__header-word-accent"><span class="wiggle-animation">p</span></span>er
                 </span>
             </h1>
-            <div class="intro__info hidden">
+            <div class="intro__info" data-aos="fade-down">
                 <a class="intro__info-link" href="/public/images/photos/firstphoto1440.png" download>
                     <svg class="intro__icon" fill="#b61b1d" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 58 58" xml:space="preserve">
@@ -210,23 +207,23 @@
             <div class="texture texture_about-top">
                 <div class="inner"></div>
             </div>
-            <div class="about__label underscore underscore_yellow hidden fade-right">About</div>
+            <div class="about__label underscore underscore_yellow" data-aos="fade-right">About</div>
             <div class="about__content-wrapper">
                 <div class="about__content">
                     <div class="about__slide a">
-                        <img class="about__slide-image hidden" src="public/images/photos/firstphoto.webp" alt="Me">
+                        <img class="about__slide-image" data-aos="fade-up" src="public/images/photos/firstphoto.webp" alt="Me">
                         <img class="about__slide-image" src="public/images/photos/firstphoto1440.webp" alt="Me" >
                         <div class="about__slide-text"> 
-                            <p class="hidden fade-right">
+                            <p data-aos="fade-right">
                                 I’m Artyom Pikulin, a front-end web developer from Russia.
                             </p>
-                            <p class="hidden fade-right">
+                            <p data-aos="fade-right">
                                 I have acquired high level programming skills 
                                 from online courses on 
                                 renowned platforms like HTML Academy, Udemy, Skillbox. 
                                 I also deepen my knowledge by reading a variety of educational literature.
                             </p>
-                            <p class="hidden fade-right">
+                            <p data-aos="fade-right">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                                 Assumenda, nesciunt. Eaque voluptate fugit tenetur doloribus
                                 quia consectetur corporis cumque sapiente.
@@ -234,22 +231,22 @@
                         </div>
                     </div>
                     <div class="about__slide b">
-                        <img class="about__slide-image hidden" src="/public/images/photos/secondphoto.webp" alt="Me">
+                        <img class="about__slide-image" data-aos="fade-up" src="/public/images/photos/secondphoto.webp" alt="Me">
                         <img class="about__slide-image" src="/public/images/photos/secondphoto1440.webp" alt="Me">
                         <div>
                             <div class="about__slide-text">
-                                <p class="hidden fade-right">
+                                <p data-aos="fade-right">
                                     I like building an adaptive,
                                     interactive websites using modern
                                     programming tools such as React, Redux, NodeJS and others. 
                                 </p>
-                                <p class="hidden fade-right">
+                                <p data-aos="fade-right">
                                     I want to become a full-stack developer in the future, 
                                     so I have some experience with back-end as well.
                                 </p>
                             </div>
                             <div class="about__slide-tickers">
-                                <div class="slider hidden">
+                                <div class="slider">
                                     <div class="slide-track">
                                         <div class="slide">
                                             <img data-tooltip="HTML5" src="./public/images/icons/html.svg" alt="HTML">
@@ -293,7 +290,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="slider hidden">
+                                <div class="slider">
                                     <div class="slide-track">
                                         <div class="slide">
                                             <img data-tooltip="Docker" src="/public/images/icons/docker.svg" alt="Docker">
@@ -349,14 +346,14 @@
         </section>
         
         <section class="works" id="works">
-            <div class="works__label underscore underscore_yellow hidden fade-right">Some Works</div>
+            <div class="works__label underscore underscore_yellow" data-aos="fade-right">Some Works</div>
             <ul class="works__list swipe-section">
                 <li class="works__card panel">
-                    <h2 class="card__title hidden fade-left">Space Tourism</h2>
+                    <h2 class="card__title" data-aos="fade-left">Space Tourism</h2>
                     <div class="card__container">
                         <div class="card__content pc">
-                            <img class="card__image hidden fade-left" loop autoplay src="public/images/websites/spacetourism.webp">
-                            <img class="card__image hidden fade-left" loop autoplay src="public/images/websites/spacetourism.webp">
+                            <img class="card__image" data-aos="fade-left" loop autoplay src="public/images/websites/spacetourism.webp">
+                            <img class="card__image" data-aos="fade-left" loop autoplay src="public/images/websites/spacetourism.webp">
                             <button class="card__button"></button>
                             <div class="card__technologies card__content-item">
                                 <div class="card__links">
@@ -376,15 +373,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="works__text hidden fade-left">
+                        <div class="works__text" data-aos="fade-left">
                             A single-page website that contains information about space, planets and modern space technologies. It consists of 4 sections, each of which contains its own information. The website looks great on devices with different viewports due to adaptive layout. 
                         </div>
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title hidden fade-right">Todo App</h2>
+                    <h2 class="card__title" data-aos="fade-right">Todo App</h2>
                     <div class="card__container">
-                        <div class="card__content mobile hidden fade-right">
+                        <div class="card__content mobile" data-aos="fade-right">
                             <img class="card__image" src="public/images/websites/mobile.webp" alt="todo app">
                             <img class="card__image" src="public/images/websites/todo.webp" alt="todo app">
                             <button class="card__button"></button>
@@ -406,16 +403,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="works__text hidden fade-right">
+                        <div class="works__text" data-aos="fade-right">
                             This website is a task management app. Users can add, edit and delete tasks and boards. Tasks can contain a subtasks
                             which can be marked by user as completed. Users can change the status of a task to change the column it is in.                        
                         </div>
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title hidden fade-left">Feedback App</h2>
+                    <h2 class="card__title" data-aos="fade-left">Feedback App</h2>
                     <div class="card__container">
-                        <div class="card__content tablet hidden fade-left">
+                        <div class="card__content tablet" data-aos="fade-left">
                             <img class="card__image" src="public/images/websites/tabletfeed.png" alt="feedback app">
                             <img class="card__image" src="public/images/websites/feedback.webp" alt="feedback app">
                             <button class="card__button"></button>
@@ -437,7 +434,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="works__text hidden fade-left">  
+                        <div class="works__text" data-aos="fade-left">  
                             This is a feedback sharing app. With its help, user can report an issue, which can be handled by development team
                             afterwards. User can leave a comment to a feedback, upvote it or edit it if necessary. Feedbacks have different states.
                             Feedbacks with a "suggestion" state can be seen on the home page, while the rest can be seen on the roadmap page.
@@ -445,9 +442,9 @@
                     </div>
                 </li>
                 <li class="works__card panel">
-                    <h2 class="card__title hidden fade-right">Design Agency</h2>
+                    <h2 class="card__title" data-aos="fade-right">Design Agency</h2>
                     <div class="card__container">
-                        <div class="card__content pc hidden fade-right">
+                        <div class="card__content pc" data-aos="fade-right">
                             <img src="public/images/websites/designagency.webp" alt="design agency" class="card__image">
                             <img class="card__image" src="public/images/websites/designagency.webp" alt="design agency">
                             <button class="card__button"></button>
@@ -469,7 +466,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="works__text hidden fade-right">
+                        <div class="works__text" data-aos="fade-right">
                             The site provides users with information about the design agency. It contains information about the agency's team, the
                             design process, the latest websites created, client reviews, and more.
                         </div>
@@ -481,7 +478,7 @@
             <div class="texture texture_projects-top"><div class="inner"></div></div>
 
             <div class="projects-container">
-                <div class="projects__inner-text hidden fade-top">
+                <div class="projects__inner-text" data-aos="fade-down">
                     <h2 class="projects__title">
                         You can check<br> all my projects
                         <a class="projects__link" target="_blank" href="https://works.pikulinweb.ru">
@@ -501,16 +498,16 @@
 
         <section class="socials__bottom">
             <ul class="socials__links">
-                <li class="hidden">
+                <li data-aos="fade-down">
                     <a href="mailto:contact@pikulinweb.ru" target="_blank" class="socials__link">Email</a>
                 </li>
-                <li class="hidden">
+                <li data-aos="fade-down">
                     <a href="https://github.com/kanae367" target="_blank" class="socials__link">GitHub</a>
                 </li>
-                <li class="hidden">
+                <li data-aos="fade-down">
                     <a href="https://t.me/kanae367" target="_blank" class="socials__link">Telegram</a>
                 </li>
-                <li class="hidden">
+                <li data-aos="fade-down">
                     <a href="https://www.linkedin.com/in/artyom-pikulin-8166b0279/" target="_blank" class="socials__link">LinkedIn</a>
                 </li>
             </ul>
@@ -525,10 +522,10 @@
     </footer>
 
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollToPlugin3.min.js"></script>
-    <script src="dist/js/aos.min.js"></script>
     <script src="dist/js/gsap.min.js"></script>
     <script src="dist/js/tooltips.min.js"></script>
     <script src="dist/js/worksCard.min.js"></script>

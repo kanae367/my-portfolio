@@ -1,8 +1,9 @@
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
     .works__card{
         .hidden{
             opacity: 1;
             transition: unset;
+            will-change: scroll-position;
         }
         
         .fade-left {

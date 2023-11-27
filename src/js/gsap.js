@@ -1,4 +1,4 @@
-if(window.innerWidth > 1280 && window.innerHeight > 720){
+if(window.innerWidth >= 1280 && window.innerHeight > 720){
     gsap.registerPlugin(ScrollTrigger);
     
     //about

@@ -1,6 +1,7 @@
 (() => {
+  AOS.init();
+  
   document.querySelector('.preloader-container').classList.add('hide');
-
   const socials = document.querySelector('.socials');
 
   document.addEventListener('scroll', (e) => {

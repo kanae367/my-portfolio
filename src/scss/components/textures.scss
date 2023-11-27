@@ -13,7 +13,7 @@
         rotate: 1deg;
         box-shadow: 0 10px 10px #000000bb;
         
-        @media screen and (max-width: 1439px) {
+        @media screen and (max-width: 1279px) {
             display: none;
         }
     }
@@ -23,7 +23,7 @@
         rotate: -5deg;
         box-shadow: 0 -10px 10px #000000bb;
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1280px) {
             rotate: -1.2deg;
             top: 70px;
         }
@@ -35,9 +35,12 @@
         rotate: 2deg;
         box-shadow: 0 10px 10px #000000bb;
         
+        @media screen and (min-width: 1280px) {
+            rotate: 1.2deg;
+        }
+        
         @media screen and (min-width: 1440px) {
             bottom: 170px;
-            rotate: 1.2deg;
         }
     }
 
@@ -108,7 +111,7 @@
         rotate: 5deg;
         box-shadow: 0 -10px 10px  #000000bb;
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1280px) {
             display: none;
         }
     }
@@ -118,7 +121,7 @@
         rotate: -5deg;
         box-shadow: 0 10px 10px  #000000bb;
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1280px) {
             display: none;
         }
     }
