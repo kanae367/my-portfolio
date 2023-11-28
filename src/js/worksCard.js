@@ -6,7 +6,6 @@ const cadrButtonClickHandler = (e) => {
     container.classList.toggle('card__content_tech');
 }
 
-const cards = document.querySelectorAll('.card__technologies');
 
 const cardMouseOutHandler = function() {
     this.closest(".card__content").classList.remove('card__content_active');
@@ -18,6 +17,7 @@ const cardMouseOverHandler = function() {
     this.addEventListener('mouseout', cardMouseOutHandler);
 }
 
+const cards = document.querySelectorAll('.card__technologies');
 cards.forEach(card => {
     card.addEventListener('mouseover', cardMouseOverHandler);
     card.closest(".card__content").querySelector('button').addEventListener('click', cadrButtonClickHandler);

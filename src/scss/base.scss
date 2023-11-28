@@ -12,6 +12,7 @@
 html{
     @media screen and (max-width: 1279px) {
         scroll-behavior: smooth !important;
+        scrollbar-width: none;
     }
 }
 
@@ -55,17 +56,6 @@ html{
     overflow-x: hidden;
 }
 
-img:hover + .tooltip{
-    visibility: visible;
-    opacity: 1;
-} 
-
-.black{
-    position: fixed;
-    inset: 0;
-    background-color: black;
-    z-index: 55;
-}
 
 .tooltip{
     color: white;
@@ -73,4 +63,10 @@ img:hover + .tooltip{
     opacity: 0;
     transition: all .3s;
     padding-bottom: 5px;
+    z-index: 10;
+}
+
+img[data-tooltip]:hover + .tooltip{
+    visibility: visible;
+    opacity: 1;
 }

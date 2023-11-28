@@ -233,6 +233,12 @@
     text-decoration: none;
     padding-bottom: 5px;
     text-shadow: 1px 1px 2px black;
+    transition: opacity .4s, scale .1s;
+
+    &:hover{
+        opacity: .9;
+        scale: .99;
+    }
 
     &::after{
         position: absolute;

@@ -79,7 +79,7 @@
     opacity: 0;
     transition: .5s all;
     background-color: transparent;
-    height: 100vh;
+    bottom: 0;
     top: 0;
     z-index: 10;
 
@@ -206,7 +206,7 @@ a img{
     position: absolute;
     background-color: white;
     z-index: 5;
-    bottom: 20px;
+    bottom: 60px;
     left: 20px;
     padding: 10px 20px;
     border-radius: 8px;
@@ -226,7 +226,7 @@ a img{
     color: white;
     opacity: .28;
     text-align: right;
-    bottom: 40px;
+    bottom: 60px;
     right: 20px;
 
     p{
