@@ -6,7 +6,7 @@
   const removePreloader = () => {
     const preloader = document.querySelector('.preloader-container');
     preloader.classList.add('hide');
-    preloader.remove();
+    // preloader.remove();
   }
   
   removePreloader();

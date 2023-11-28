@@ -1,3 +1,12 @@
+@keyframes preloaderfade {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .preloader-container{
     position: fixed;
     display: flex;
@@ -8,15 +17,22 @@
     background-color: #1e1b1b;
     z-index: 10000000;
     left: 0;
+    transition: background-color .5s;
 
     &.hide{
-        display: none;
+        background-color: black;
+        animation: preloaderfade 1s forwards .5s;
+        
+        *{
+            opacity: 0;
+        }
     }
 }
 
 .preloader{
     position: relative;
     display: flex;
+    transition: opacity .5s;
 }
 
 .preloader__line{
