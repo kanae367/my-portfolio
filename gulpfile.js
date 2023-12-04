@@ -5,6 +5,7 @@ const browserSync = require("browser-sync").create();
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
+// const autoprefixer = require("gulp-autoprefixer");
 
 // Sass
 
@@ -12,6 +13,7 @@ gulp.task("sass", function(done){
     return gulp
             .src('./src/scss/main.scss')
             .pipe(sourcemaps.init())
+            // .pipe(autoprefixer())
             .pipe(sass())
             .pipe(cssnano())
             .pipe(sourcemaps.write("."))

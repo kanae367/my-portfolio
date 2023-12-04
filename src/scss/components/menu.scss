@@ -1,7 +1,7 @@
 .mobile-nav{
-    width: 100vw;
+    width: 100%;
     top: 0px;
-    z-index: 1000;
+    z-index: 3;
     display: flex;
     padding: 20px 30px;
     align-items: center;
@@ -19,9 +19,11 @@
 }
 
 .unseen{
-    box-shadow: 0 4px 20px black;
+    filter: drop-shadow(0 4px 20px black);
+    overflow-x: hidden;
     position: fixed;
     margin-top: -80px;
+    z-index: 5;
 }
 
 .transition-enable{
@@ -81,7 +83,7 @@
     background-color: transparent;
     bottom: 0;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 
     &-inner{
         position: absolute;
