@@ -1,7 +1,23 @@
-if(window.innerWidth >= 1280 && window.innerHeight > 720){
-    gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-    //about
+let panels = document.querySelectorAll('.panel');
+let swiperSection = document.querySelector('.swipe-section');
+let aboutSection = document.querySelector('.about');
+
+window.addEventListener('resize', () => {
+    let mql = window.matchMedia("(max-width: 1279px)");
+    
+    if(mql.matches){
+        panels.forEach(item => item.style = '');
+        swiperSection.style = '';
+        aboutSection.style = '';
+    }
+})
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 1280px)", () => {
+
     let sections = gsap.utils.toArray(".about__slide");
     
     let scrollTween = gsap.to(sections, {
@@ -83,4 +99,4 @@ if(window.innerWidth >= 1280 && window.innerHeight > 720){
             gotoPanel(currentIndex - 1, false);
         }
     });
-}    
+})
