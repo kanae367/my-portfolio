@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is website that is functioning as a my portfolio.
+This is a website that functions as my portfolio.
 
 ![preview](Preview.png)
 
