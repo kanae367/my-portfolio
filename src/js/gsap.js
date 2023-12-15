@@ -58,7 +58,7 @@ mm.add("(min-width: 1280px)", () => {
     
     // create an observer and disable it to start
     let intentObserver = ScrollTrigger.observe({
-        type: "wheel,touch",
+        type: "wheel",
         onUp: () => !animating && gotoPanel(currentIndex - 1, false),
         onDown: () => !animating && gotoPanel(currentIndex + 1, true),
         tolerance: 10,
@@ -76,6 +76,7 @@ mm.add("(min-width: 1280px)", () => {
         }
     
         let target = isScrollingDown ? swipePanels[currentIndex] : swipePanels[index];
+
         gsap.to(target, {
             yPercent: isScrollingDown ? -100 : 0,
             duration: 0.75,
@@ -89,7 +90,7 @@ mm.add("(min-width: 1280px)", () => {
     ScrollTrigger.create({
         trigger: ".swipe-section",
         pin: true,
-        start: "top top",
+        start: "top top", 
         onEnter: () => {
             intentObserver.enable();
             gotoPanel(currentIndex + 1, true);

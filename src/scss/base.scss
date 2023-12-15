@@ -10,8 +10,9 @@
 }
 
 html{
+    scroll-behavior: smooth !important;
+
     @media screen and (max-width: 1279px) {
-        scroll-behavior: smooth !important;
         scrollbar-width: none;
     }
 }

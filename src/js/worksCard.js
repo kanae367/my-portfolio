@@ -1,3 +1,4 @@
+(() => {
 const cardStates = ['', 'card__content_tech'];
 
 const cadrButtonClickHandler = (e) => {
@@ -22,3 +23,4 @@ cards.forEach(card => {
     card.addEventListener('mouseover', cardMouseOverHandler);
     card.closest(".card__content").querySelector('button').addEventListener('click', cadrButtonClickHandler);
 })
+})();
