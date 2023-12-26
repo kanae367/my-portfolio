@@ -1,12 +1,9 @@
 (() => {
-const cardStates = ['', 'card__content_tech'];
-
 const cadrButtonClickHandler = (e) => {
     e.preventDefault();
     const container = e.target.closest('.card__content');
     container.classList.toggle('card__content_tech');
 }
-
 
 const cardMouseOutHandler = function() {
     this.closest(".card__content").classList.remove('card__content_active');
