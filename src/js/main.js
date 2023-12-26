@@ -16,7 +16,7 @@
 
   const socials = document.querySelector('.socials');
   document.addEventListener('scroll', (e) => {
-    const aboutEndPoint = 2020;
+    const aboutEndPoint = 1960;
     const scroll = e.target.documentElement.scrollTop;
 
     if(scroll > aboutEndPoint){
