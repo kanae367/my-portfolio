@@ -479,3 +479,9 @@
         gap: 0px;
     }
 }
+
+[data-aos].card__title, [data-aos].card__content, [data-aos].works__text{
+    @media screen and (min-width: 1280px) {
+        transform: none !important;
+    }
+}
