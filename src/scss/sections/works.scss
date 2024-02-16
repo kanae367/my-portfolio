@@ -280,8 +280,8 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
-    .works__card{
+.works__card{
+    @media screen and (min-width: 1280px) {
         &:nth-child(2n){
             .card__content{
                 margin-left: auto;
@@ -300,6 +300,14 @@
             } 
         }
     }
+
+    @media screen and (max-width: 1279px) {
+        &:nth-child(2), &:nth-child(3){
+            .card__image:first-child{
+                display: none;
+            }
+        }
+    }
 }
 
 .card__image{
@@ -309,10 +317,6 @@
     border-radius: 8px;
 
     @media screen and (max-width: 1279px) {
-        &:first-child{
-            display: none;
-        }
-
         width: 100%;
         max-width: 650px;
         height: auto;
