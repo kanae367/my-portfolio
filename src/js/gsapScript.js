@@ -45,59 +45,115 @@ mm.add("(min-width: 1280px)", () => {
         opacity: 0
     })
     
-//works
-    let currentIndex = 0;
-    let animating;
-    let swipePanels = gsap.utils.toArray(".works__card");
-    
-    // set z-index levels for the swipe panels
-    let reversedPanels = [...swipePanels].reverse();
-    reversedPanels.forEach((panel, index) => {
-        gsap.set(panel, { zIndex: index });
-    });
-    
-    // create an observer and disable it to start
-    let intentObserver = ScrollTrigger.observe({
-        type: "wheel",
-        onUp: () => !animating && gotoPanel(currentIndex - 1, false),
-        onDown: () => !animating && gotoPanel(currentIndex + 1, true),
-        tolerance: 10,
-        preventDefault: true
-    });
-    intentObserver.disable();
-    
-    // handle the panel swipe animations
-    function gotoPanel(index, isScrollingDown) {
-        animating = true;
-        // return to normal scroll if we're at the end or back up to the start
-        if ((index === swipePanels.length && isScrollingDown) || (index === -1 && !isScrollingDown)) {
-            intentObserver.disable();
-            return;
-        }
-    
-        let target = isScrollingDown ? swipePanels[currentIndex] : swipePanels[index];
+	const Scroll = new function() {
+	let sections
+	let page
+	let main
+	let tl
+	let win
+	
+	// Init
+	this.init = () => {
+		sections = document.querySelectorAll('.panel')
+		page = document.querySelector('.section-wrapper')
+		main = document.querySelector('.swipe-section')
+		win = {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+		
+		this.setupTimeline()
+		this.setupScrollTrigger()
+		window.addEventListener('resize', this.onResize)
+	}
+	
+	// Setup ScrollTrigger
+	this.setupScrollTrigger = () => {
+		page.style.height = (this.getTotalScroll() + win.h) + 'px'
+		
+		ScrollTrigger.create({
+			id: 'mainScroll',
+			trigger: '.swipe-section',
+			animation: tl,
+			pin: true,
+			scrub: true,
+			snap: {
+				snapTo: (value) => {
+					
+					let labels = Object.values(tl.labels)
+					
+					const snapPoints = labels.map(x => x / tl.totalDuration());
+					const proximity = 0.1
+					
+					console.log(tl.labels , tl.totalDuration(), labels, snapPoints)
+					
+					for (let i = 0; i < snapPoints.length; i++) {
+						if (value > snapPoints[i] - proximity && value < snapPoints[i] + proximity) {
+							return snapPoints[i]
+						}
+					}
+				},
+				duration: { min: 0.2, max: 0.6 },
+			},
+			start: 'top top',
+			end: '+=' + this.getTotalScroll(),
+		})
+	}
+	
+	// Setup timeline
+	this.setupTimeline = () => {
+		tl = gsap.timeline()
+		tl.addLabel("label-initial")
+		
+		sections.forEach((section, index) => {
+			const nextSection = sections[index+1]
+			if (!nextSection) return
 
-        gsap.to(target, {
-            yPercent: isScrollingDown ? -100 : 0,
-            duration: 0.75,
-            onComplete: () => (animating = false)
-        });
-    
-        currentIndex = index;
-    }
-    
-    // pin swipe section and initiate observer
-    ScrollTrigger.create({
-        trigger: ".swipe-section",
-        pin: true,
-        start: "top top", 
-        onEnter: () => {
-            intentObserver.enable();
-            gotoPanel(currentIndex + 1, true);
-        },
-        onEnterBack: () => {
-            intentObserver.enable();
-            gotoPanel(currentIndex - 1, false);
-        }
-    });
+			tl.to(nextSection, {
+				y: -1 * nextSection.offsetHeight,
+				duration: nextSection.offsetHeight,
+				ease: 'linear',
+			})
+			.addLabel(`label${index}`)
+		})
+	}
+	
+	// On resize
+	this.onResize = () => {
+		win = {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+		
+		this.reset()
+	}
+	
+	// Reset
+	this.reset = () => {
+		if (typeof ScrollTrigger.getById('mainScroll') === 'object') {
+			ScrollTrigger.getById('mainScroll').kill()
+		}
+		
+		if (typeof tl === 'object') {
+			tl.kill()
+			tl.seek(0)
+		}
+		
+		document.body.scrollTop = document.documentElement.scrollTop = 0
+		this.init()
+	}
+	
+	// Get total scroll
+	this.getTotalScroll = () => {
+		let totalScroll = 0
+		sections.forEach(section => {
+			totalScroll += section.offsetHeight
+		})
+		totalScroll -= win.h
+		return totalScroll
+	}
+}
+
+Scroll.init()
 })
+
