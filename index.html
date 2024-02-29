@@ -232,8 +232,12 @@
                         </div>
                     </div>
                     <div class="about__slide b">
-                        <img class="about__slide-image" data-aos="fade-up" src="/public/images/photos/second.png"
-                            alt="Desktop">
+                        <picture>
+                            <source srcset="/public/images/photos/second.webp" media="(min-width: 1280px)"/>
+                            <source srcset="/public/images/photos/screens.webp" media="(max-width: 1279px)"/>
+                            <img class="about__slide-image" data-aos="fade-up" src="/public/images/photos/second.png"
+                                alt="code image">
+                        </picture>
                         <div>
                             <div class="about__slide-text">
                                 <p>
